@@ -1,20 +1,19 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react()
-  ],
+  plugins: [react()],
   publicDir: "public",
   base: "./",
-  resolve : {
+  resolve: {
     alias: {
-      '@': resolve(__dirname, 'src/')
-    }
+      "@": resolve(__dirname, "src"),
+      icons: resolve(__dirname, "src/assets/icons"),
+    },
   },
-  extensions:[".js", ".jsx"],
+  extensions: [".js", ".jsx"],
   build: {
     rollupOptions: {
       output: {
@@ -45,5 +44,6 @@ export default defineConfig({
         assetFileNames: "[ext]/[name].[hash:4].[ext]",
       },
     },
-  }
-})
+  },
+});
+
