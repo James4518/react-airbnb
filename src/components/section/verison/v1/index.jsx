@@ -1,25 +1,25 @@
 import PropTypes from "prop-types";
 import React, { memo } from "react";
-import { SectionWrapper } from "./style";
+import { Section1Wrapper } from "./style";
 import List from "@/base-ui/list";
-import SectionHeader from "./cpns/section-header";
-import SectionFooter from "./cpns/section-footer";
+import SectionHeader from "@/components/section-header";
+import SectionFooter from "@/components/section-footer";
 
-const Section = memo((props) => {
+const Section1 = memo((props) => {
   const { data, name } = props;
   return (
-    <SectionWrapper>
+    <Section1Wrapper>
       <SectionHeader title={data.title} subtitle={data.subtitle}></SectionHeader>
       <List list={data.list}></List>
       <SectionFooter name={name}></SectionFooter>
-    </SectionWrapper>
+    </Section1Wrapper>
   );
 });
 
-Section.propTypes = {
+Section1.propTypes = {
   data: PropTypes.object,
   name: PropTypes.string
 };
 
-export default Section;
+export default Section1;
 

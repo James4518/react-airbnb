@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ListItemWrapper = styled.div`
+  flex-shrink: 0;
   box-sizing: border-box;
   width: ${(props) => props.itemwidth};
   padding: 3px;
@@ -19,6 +20,7 @@ export const ListItemWrapper = styled.div`
       left: 0;
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
   .desc,

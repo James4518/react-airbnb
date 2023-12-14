@@ -6,6 +6,9 @@ export const HomeWrapper = styled.div`
     width: 1032px;
     margin: 0 auto;
   }
+  .content > *{
+    margin-top: 30px;
+  }
 `;
 
 export const BannerWrapper = styled.div`
