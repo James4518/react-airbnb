@@ -1,16 +1,16 @@
 const theme = {
   color: {
     primary: "#ff385c",
-    sencond: "#00848A",
+    second: "#00848A",
     third: "#fff"
   },
   textColor: {
     primary: "#484848",
-    sencond: "#222",
+    second: "#222",
   },
   textSize: {
-    primary: "18px",
-    second: "16px",
+    primary: "16px",
+    second: "14px",
   },
   mixin: {
     boxShadow: `

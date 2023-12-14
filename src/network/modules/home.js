@@ -6,6 +6,12 @@ export function getGoodPriceData(){
   })
 }
 
+export function getHotRecommendData() {
+  return request.get({
+    url: "/home/hotrecommenddest"
+  })
+}
+
 export function getPlusData() {
   return request.get({
     url: "/home/plus"

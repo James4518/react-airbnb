@@ -28,12 +28,12 @@ const ViewWrapper = styled.div`
     &.left {
       left: 0;
       top: 50%;
-      transform: translate(-80%, -110%);
+      transform: translate(-80%, -50%);
     }
     &.right {
       right: 0;
       top: 50%;
-      transform: translate(60%, -110%);
+      transform: translate(50%, -50%);
     }
   }
 `;
