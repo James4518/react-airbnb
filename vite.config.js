@@ -13,7 +13,7 @@ export default defineConfig({
       icons: resolve(__dirname, "src/assets/icons"),
     },
   },
-  extensions: [".js", ".jsx"],
+  extensions: [".js", ".jsx", ".json"],
   build: {
     rollupOptions: {
       output: {
