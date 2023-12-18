@@ -4,4 +4,7 @@ export const LeftWrapper = styled.div`
   display: flex;
   flex: 1;
   color: ${(props) => props.theme.color.primary};
+  .logo {
+    cursor: pointer;
+  }
 `;
