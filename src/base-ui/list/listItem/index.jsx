@@ -1,11 +1,14 @@
 import PropTypes from "prop-types";
 import React, { memo } from "react";
-import { ListItemWrapper } from "./style";
 import { Rating } from "@mui/material";
+import { ListItemWrapper } from "./style";
 import Carousel from "@/base-ui/carousel";
 
 const ListItem = memo((props) => {
-  const { itemData, itemWidth = "25%" } = props;
+  const { itemData, itemWidth = "25%", itemClick } = props;
+  const itemClickHandle = () => {
+    if (itemClick) itemClick(itemData);
+  };
   const picElement = (
     <div className="cover">
       <img src={itemData.picture_url} />
@@ -17,7 +20,7 @@ const ListItem = memo((props) => {
     </div>
   );
   return (
-    <ListItemWrapper itemwidth={itemWidth}>
+    <ListItemWrapper itemwidth={itemWidth} onClick={itemClickHandle}>
       <div className="inner">
         {!itemData.picture_urls ? picElement : sliderElement}
         <span className="desc">{itemData.verify_info.messages.join("·")}</span>
@@ -42,6 +45,7 @@ const ListItem = memo((props) => {
 ListItem.propTypes = {
   itemData: PropTypes.object,
   itemWidth: PropTypes.string,
+  itemClick: PropTypes.func,
 };
 
 export default ListItem;
