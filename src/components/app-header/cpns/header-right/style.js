@@ -9,7 +9,7 @@ export const RightWrapper = styled.div`
   font-weight: 600;
   .btns {
     display: flex;
-    box-sizing: contnet-box;
+    box-sizing: content-box;
     color: ${props => props.theme.textColor.primary};
     .btn {
       height: 18px;
