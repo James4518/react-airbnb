@@ -1,10 +1,11 @@
 import React, { memo, useEffect } from "react";
-import { BannerWrapper, HomeWrapper } from "./style";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
-import { Section1, Section2, Section3 } from "@/components/section";
-import Longfor from "@/components/longfor";
+import { BannerWrapper, HomeWrapper } from "./style";
 import isEmptyObj from "@/utils/isEmptyObj";
 import { fetchHomeData } from "@/store/modules/home";
+import { changeHeaderConfigAction } from "@/store/modules/main";
+import { Section1, Section2, Section3 } from "@/components/section";
+import Longfor from "@/components/longfor";
 
 const Home = memo(() => {
   const { goodPrice, highScore, recommend, discount, longfor, plus } =
@@ -22,6 +23,7 @@ const Home = memo(() => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchHomeData());
+    dispatch(changeHeaderConfigAction({ isFixed: true, topAlpha: true }))
   }, [dispatch]);
   return (
     <HomeWrapper>

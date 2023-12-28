@@ -14,7 +14,7 @@ export const CarouselWrapper = styled.div`
   }
   .slick-prev,
   .slick-next {
-    z-index: 99;
+    z-index: 9;
   }
   .slick-prev::before,
   .slick-next::before {

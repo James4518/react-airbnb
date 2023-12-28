@@ -1,13 +1,19 @@
-import React, { memo } from 'react'
-import { DetailWrapper } from './style'
-import DetailPictures from './cpns/detail-pictures'
+import React, { memo, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { changeHeaderConfigAction } from "@/store/modules/main";
+import { DetailWrapper } from "./style";
+import DetailPictures from "./cpns/detail-pictures";
 
 const Detail = memo(() => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeHeaderConfigAction({ isFixed: false, topAlpha: false }));
+  }, [dispatch]);
   return (
     <DetailWrapper>
-      <DetailPictures/>
+      <DetailPictures />
     </DetailWrapper>
-  )
-})
+  );
+});
 
-export default Detail
+export default Detail;
